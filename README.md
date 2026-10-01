@@ -1,80 +1,129 @@
-ByteSpace New
+<div align="center">
 
-A modern and responsive learning platform website built as part of the ByteSpace New Frontend Assessment.
+# ByteSpace New
 
-The website is developed based on the provided Figma design with a focus on responsive UI, reusable components, clean code structure, and a smooth user experience.
+**A modern, responsive learning platform built for the ByteSpace Frontend Assessment.**
 
-🔗 Links
-Live Demo
-https://your-project.vercel.app
-GitHub Repository
-https://github.com/Ripon-Mardy/bytespace-new
-Figma Design
-https://www.figma.com/design/26TBgRjmpuxudcErJsHUfy/ByteSpace-New-Check-website
-✨ Features
-Landing Page
-Responsive navigation
-Hero section
-Course sections
-Creator sections
-Features section
-Testimonials section
-Call-to-action sections
-Responsive footer
-Mobile-friendly layout
-Reusable UI components
-Smooth animations and interactions
-Bonus Features
-Login page
-Signup page
-Course details page
-Course tabs
-Custom 404 page
-Responsive mobile menu
-🛠️ Tech Stack
-Next.js
-React
-TypeScript
-Tailwind CSS
-Framer Motion
-Lucide Icons
-Vercel
-📁 Project Structure
+Pixel-focused implementation of the Figma design with reusable components, clean structure and a smooth user experience.
+
+<br />
+
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-D4FB20?style=for-the-badge&logo=vercel&logoColor=black)](https://your-project.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ripon-Mardy/bytespace-new)
+[![Figma](https://img.shields.io/badge/Figma-Design-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/26TBgRjmpuxudcErJsHUfy/ByteSpace-New-Check-website)
+
+<br />
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+
+</div>
+
+---
+
+## 📑 Table of Contents
+
+- [Preview](#-preview)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Available Scripts](#-available-scripts)
+- [Responsive Design](#-responsive-design)
+- [Reusable Components](#-reusable-components)
+- [Git Workflow](#-git-workflow)
+- [Deployment](#-deployment)
+- [Assessment Requirements](#-assessment-requirements)
+- [Author](#-author)
+
+---
+
+## 🖼️ Preview
+
+<!-- Add a screenshot of your landing page here:
+     1. Put the image in /public/screenshots/home.png
+     2. Uncomment the line below -->
+
+<!-- ![ByteSpace Landing Page](./public/screenshots/home.png) -->
+
+> Live site: **[your-project.vercel.app](https://your-project.vercel.app)**
+
+---
+
+## ✨ Features
+
+### Landing Page
+
+- Responsive navigation with a mobile menu
+- Hero section
+- Course and creator sections
+- Features section
+- Testimonials section
+- Call-to-action sections
+- Responsive footer
+- Smooth animations and interactions
+- Mobile-friendly layout built from reusable UI components
+
+### 🎁 Bonus Pages
+
+| Page               | Description                                 |
+| ------------------ | ------------------------------------------- |
+| **Login**          | Sign-in page with a clean, responsive form  |
+| **Signup**         | Account creation page                       |
+| **Course Details** | Course info, enroll card and tabbed content |
+| **404**            | Custom "page not found" screen              |
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology                                      | Purpose                           |
+| ----------------------------------------------- | --------------------------------- |
+| [Next.js](https://nextjs.org/)                  | App Router, routing and rendering |
+| [React](https://react.dev/)                     | UI library                        |
+| [TypeScript](https://www.typescriptlang.org/)   | Type safety                       |
+| [Tailwind CSS](https://tailwindcss.com/)        | Styling                           |
+| [Framer Motion](https://www.framer.com/motion/) | Animations                        |
+| [Lucide Icons](https://lucide.dev/)             | Icon set                          |
+| [Vercel](https://vercel.com/)                   | Hosting and deployment            |
+
+---
+
+## 📁 Project Structure
+
+```bash
 bytespace-new/
-│
 ├── public/
-│ ├── images/
-│ ├── icons/
-│ └── ...
+│   ├── images/
+│   ├── icons/
+│   └── ...
 │
 ├── src/
-│ │
-│ ├── app/
-│ │ ├── courses/
-│ │ │ └── [slug]/
-│ │ │ └── page.tsx
-│ │ │
-│ │ ├── login/
-│ │ │ └── page.tsx
-│ │ │
-│ │ ├── signup/
-│ │ │ └── page.tsx
-│ │ │
-│ │ ├── globals.css
-│ │ ├── layout.tsx
-│ │ ├── not-found.tsx
-│ │ └── page.tsx
-│ │
-│ ├── components/
-│ │ ├── course-details/
-│ │ ├── home/
-│ │ ├── layout/
-│ │ └── ui/
-│ │
-│ ├── data/
-│ └── lib/
-│
-├── public/
+│   ├── app/
+│   │   ├── courses/
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx     # Course details page
+│   │   ├── login/
+│   │   │   └── page.tsx
+│   │   ├── signup/
+│   │   │   └── page.tsx
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── not-found.tsx        # Custom 404 page
+│   │   └── page.tsx             # Landing page
+│   │
+│   ├── components/
+│   │   ├── course-details/      # EnrollCard, CourseTabs
+│   │   ├── home/                # Landing page sections
+│   │   ├── layout/              # Header, Footer, MobileMenu
+│   │   └── ui/                  # Button, Container, SectionHeading...
+│   │
+│   ├── data/                    # Static data (courses, etc.)
+│   └── lib/                     # Helpers and utilities
 │
 ├── .gitignore
 ├── next.config.ts
@@ -82,127 +131,136 @@ bytespace-new/
 ├── postcss.config.mjs
 ├── tsconfig.json
 └── README.md
-🚀 Getting Started
+```
+
+---
+
+## 🚀 Getting Started
 
 Follow these steps to run the project locally.
 
-1. Clone the repository
-   git clone https://github.com/Ripon-Mardy/bytespace-new.git
-2. Go to the project directory
-   cd bytespace-new
-3. Install dependencies
-   npm install
-4. Start the development server
-   npm run dev
+**Prerequisites:** [Node.js](https://nodejs.org/) 20 or newer and npm.
 
-The application will be available at:
+```bash
+# 1. Clone the repository
+git clone https://github.com/Ripon-Mardy/bytespace-new.git
 
-http://localhost:3000
-📜 Available Scripts
-Development
+# 2. Go to the project directory
+cd bytespace-new
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
 npm run dev
+```
 
-Runs the development server.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Build
-npm run build
+---
 
-Creates an optimized production build.
+## 📜 Available Scripts
 
-Production
-npm run start
+| Command         | Description                           |
+| --------------- | ------------------------------------- |
+| `npm run dev`   | Starts the development server         |
+| `npm run build` | Creates an optimized production build |
+| `npm run start` | Starts the production server          |
+| `npm run lint`  | Checks the project for linting issues |
 
-Starts the production server.
+---
 
-Lint
-npm run lint
+## 📱 Responsive Design
 
-Checks the project for linting issues.
+Designed and tested across common screen sizes:
 
-📱 Responsive Design
+| Device     | Status       |
+| ---------- | ------------ |
+| 📱 Mobile  | ✅ Supported |
+| 📱 Tablet  | ✅ Supported |
+| 💻 Laptop  | ✅ Supported |
+| 🖥️ Desktop | ✅ Supported |
 
-The website is designed and tested for different screen sizes:
+Navigation, sections, cards, typography, spacing and layouts all adapt to the viewport.
 
-📱 Mobile
-📱 Tablet
-💻 Laptop
-🖥️ Desktop
+---
 
-The navigation, sections, cards, typography, spacing, and layouts adapt to different viewport sizes.
+## 🧩 Reusable Components
 
-🧩 Reusable Components
+The project follows a reusable, component-based architecture:
 
-The project follows a reusable component-based architecture.
+| Layout       | UI               | Feature            |
+| ------------ | ---------------- | ------------------ |
+| `Header`     | `Button`         | `CourseCard`       |
+| `MobileMenu` | `Container`      | `CreatorCard`      |
+| `Footer`     | `SectionHeading` | `TestimonialsCard` |
+|              |                  | `CourseTabs`       |
+|              |                  | `EnrollCard`       |
 
-Some of the main reusable components include:
+This keeps the code organized, maintainable and easy to extend.
 
-Header
-MobileMenu
-Footer
-Container
-Button
-SectionHeading
-CourseCard
-CreatorCard
-TestimonialsCard
-CourseTabs
-EnrollCard
+---
 
-This structure helps keep the code organized, maintainable, and easier to extend.
-
-🌿 Git Branching
+## 🌿 Git Workflow
 
 The project follows a feature-branch workflow.
 
-Main Branch
-main
-Feature Branch
-feature/bytespace-landing
+| Branch                      | Purpose               |
+| --------------------------- | --------------------- |
+| `main`                      | Production-ready code |
+| `feature/bytespace-landing` | Main implementation   |
 
-The main implementation was developed on the feature branch and submitted through a Pull Request to the main branch.
+All work was developed on the feature branch and merged into `main` through a Pull Request.
 
-🚀 Deployment
+---
 
-The project is deployed on Vercel.
+## 🌐 Deployment
 
-Deployment Flow
-Local Development
-│
-▼
-Feature Branch
-│
-▼
-GitHub
-│
-▼
-Pull Request
-│
-▼
-Main Branch
-│
-▼
-Vercel
-│
-▼
-Live Website
-📋 Assessment Requirements
+The project is deployed on **Vercel**.
 
-This project was created for the ByteSpace New Frontend Assessment.
+```mermaid
+flowchart LR
+    A[Local Development] --> B[Feature Branch]
+    B --> C[GitHub]
+    C --> D[Pull Request]
+    D --> E[Main Branch]
+    E --> F[Vercel]
+    F --> G[Live Website]
+```
 
-Required
-Complete the full landing page based on the Figma design
-Push the code to a public GitHub repository
-Use a separate Git branch
-Create a Pull Request
-Deploy the website to Vercel
-Submit the live website URL and GitHub repository
-Bonus
-Login page
-Signup page
-👨‍💻 Author
-Ripon Mardy
+---
 
+## 📋 Assessment Requirements
+
+This project was created for the **ByteSpace New Frontend Assessment**.
+
+**Required**
+
+- [x] Complete the full landing page based on the Figma design
+- [x] Push the code to a public GitHub repository
+- [x] Use a separate Git branch
+- [x] Create a Pull Request
+- [x] Deploy the website to Vercel
+- [x] Submit the live website URL and GitHub repository
+
+**Bonus**
+
+- [x] Login page
+- [x] Signup page
+
+---
+
+## 👨‍💻 Author
+
+**Ripon Mardy**
 Frontend Developer
 
-GitHub:
-https://github.com/Ripon-Mardy
+[![GitHub](https://img.shields.io/badge/GitHub-Ripon--Mardy-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Ripon-Mardy)
+
+---
+
+<div align="center">
+
+Built with care for the ByteSpace Frontend Assessment.
+
+</div>
