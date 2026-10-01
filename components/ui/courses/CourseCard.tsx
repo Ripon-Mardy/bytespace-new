@@ -35,7 +35,7 @@ const CourseCard = ({ course }: CoursesCardProps) => {
               alt={course.title}
             />
 
-            {/* title  */}
+            {/* title text */}
             <div className="flex items-center justify-between gap-2">
               <div className="flex flex-col mt-5">
                 <span className="text-(--heading-color) font-semibold text-lg md:text-[20px]">

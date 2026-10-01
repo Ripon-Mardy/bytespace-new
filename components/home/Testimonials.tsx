@@ -21,7 +21,7 @@ const Testimonials = () => {
               experienced the transformative journey of learning and creating on
               our platform. Explore testimonials that reflect the diverse
               perspectives of enthusiastic learners and accomplished creators.
-              <div className="glow-lime pointer-events-none absolute -left-100 -top-60 -z-10 h-[300px] w-[300px] blur-[20px] md:h-[600px] md:w-[600px]" />
+              <div className="glow-lime pointer-events-none absolute -left-100 -top-60 -z-10 h-75 w-[300px] blur-[20px] md:h-[600px] md:w-[600px]" />
             </p>
           </div>
 
