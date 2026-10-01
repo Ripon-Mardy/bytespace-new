@@ -1,16 +1,16 @@
 import Image from "next/image";
+import { Search } from "lucide-react";
 
 import Header from "@/components/layout/Header";
 import Container from "@/components/ui/Container";
 import Button from "../ui/Button";
-
-// icons
-import { Search } from "lucide-react";
+import HappyStudents from "../ui/HappyStudents";
+import UiuxDesign from "../ui/UiuxDesign";
+import LearningProgress from "../ui/LearningProgress";
 
 // images
 import user from "@/public/Hero Page/user.png";
 import shape from "@/public/Hero Page/Ellipse.png";
-import HappyStudents from "../ui/HappyStudents";
 
 // students
 import student1 from "@/public/user/user1.png";
@@ -20,8 +20,6 @@ import student4 from "@/public/user/user4.png";
 import student5 from "@/public/user/user5.png";
 import student6 from "@/public/user/user6.png";
 import student7 from "@/public/user/user7.png";
-import UiuxDesign from "../ui/UiuxDesign";
-import LearningProgress from "../ui/LearningProgress";
 
 const avatars = [
   { src: student1, alt: "Student 1" },
@@ -35,82 +33,101 @@ const avatars = [
 
 export default function Hero() {
   return (
-    <main className="bg-[#003be2]">
-      <section
-        className="relative overflow-hidden bg-[#0037d9]"
-        style={{
-          background: "url('/Hero Page/bg-image.png') center no-repeat",
-        }}
-      >
-        {/* Background Grid */}
-        <div
-          aria-hidden="true"
-          className="
-            pointer-events-none absolute inset-0
-            bg-[linear-gradient(to_right,rgba(255,255,255,0.15)_2px,transparent_2px),linear-gradient(to_bottom,rgba(255,255,255,0.15)_2px,transparent_2px)]
-            bg-[size:120px_120px]
-          "
-        />
+    <section
+      className="relative overflow-hidden"
+      style={{
+        backgroundColor: "#0037d9",
+        backgroundImage: "url('/Hero Page/bg-image.png')",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
+      {/* Background grid: smaller cells on mobile, bigger on desktop */}
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none absolute inset-0
+          bg-[linear-gradient(to_right,rgba(255,255,255,0.15)_2px,transparent_2px),linear-gradient(to_bottom,rgba(255,255,255,0.15)_2px,transparent_2px)]
+          bg-[size:64px_64px] md:bg-[size:96px_96px] lg:bg-[size:120px_120px]
+        "
+      />
 
-        {/* Header */}
-        <div className="relative z-10">
-          <Header />
+      {/* Header (z-20 so a mobile menu can open over the content) */}
+      <div className="relative z-20">
+        <Header />
+      </div>
+
+      <Container className="relative z-10">
+        {/* Text content */}
+        <div className="mx-auto mt-8 max-w-4xl text-center md:mt-12">
+          <h1 className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+            Get Access to Hundreds Courses Available
+          </h1>
+
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#E5E6E8] sm:mt-8 sm:text-lg">
+            Unlock your creativity, gain valuable knowledge, and grow your
+            business with our wide range of courses.
+          </p>
+
+          {/* Search: stacked on mobile, one row from sm */}
+          <form
+            action="/courses"
+            role="search"
+            className="mx-auto mt-8 flex max-w-2xl flex-col gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-4"
+          >
+            <label className="flex w-full flex-1 items-center gap-3 rounded-3xl border border-gray-300 bg-white px-4 py-3 sm:gap-4 sm:px-6">
+              <Search className="size-5 shrink-0 text-[#82868E]" />
+              <input
+                type="search"
+                name="q"
+                aria-label="Search courses"
+                placeholder="Course, topic, creator"
+                className="w-full min-w-0 bg-transparent outline-none"
+              />
+            </label>
+
+            <Button className="w-full cursor-pointer sm:w-auto">Search</Button>
+          </form>
         </div>
 
-        {/* Hero Content */}
-        <Container className="relative z-10">
-          <div className="flex items-center justify-center">
-            <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
-                Get Access to Hundreds Courses Available
-              </h2>
-
-              <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
-                Unlock your creativity, gain valuable knowledge, and grow your
-                business with our wide range of courses.
-              </p>
-
-              {/* search input  */}
-              <div className="max-w-2xl mx-auto flex items-center gap-5 mt-10">
-                <div className="flex items-center w-full gap-4 bg-white border border-gray-300 rounded-2xl py-3 px-4">
-                  <Search className="text-[#82868E]" />
-                  <input
-                    type="text"
-                    className="w-full outline-none"
-                    placeholder="Course, topic, creator"
-                  />
-                </div>
-                <Button> Search</Button>
-              </div>
-            </div>
-          </div>
-
-          {/* image  */}
-          <div className="relative mt-20">
-            <div className="flex items-center justify-center">
-              <Image src={user} alt="user" className="z-10" />
-              <div className="absolute left-0 top-10">
-                <Image src={shape} alt="shape" />
-              </div>
-            </div>
-
-            {/* Happy student  */}
-            <div className="absolute left-0 top-52 mt-4">
+        {/* Visual area */}
+        <div className="relative mt-10 flex flex-col lg:mt-0">
+          {/* Floating cards: normal flow on mobile/tablet, absolute on desktop */}
+          <div className="order-1 flex flex-wrap items-stretch justify-center gap-4 pb-8 lg:pb-0">
+            <div className="lg:absolute lg:left-8 lg:top-72 lg:z-50 xl:left-30 xl:top-80">
               <HappyStudents avatars={avatars} />
             </div>
 
-            {/* ui ux design component  */}
-            <div className="absolute left-40 top-0 mt-4">
+            <div className="lg:absolute lg:left-32 lg:top-24 lg:z-50 xl:left-55 xl:top-30">
               <UiuxDesign />
             </div>
 
-            {/* learning progress section  */}
-            <div className="absolute right-60 top-10">
+            <div className="lg:absolute lg:right-16 lg:top-36 lg:z-50 xl:right-60 xl:top-40">
               <LearningProgress value={60} />
             </div>
           </div>
-        </Container>
-      </section>
-    </main>
+
+          {/* Person image + ellipse */}
+          <div className="relative order-2 flex justify-center">
+            <Image
+              src={user}
+              alt="Smiling student holding books"
+              priority
+              className="relative z-10 h-auto w-[85%] max-w-md sm:max-w-lg md:max-w-xl lg:w-auto lg:max-w-full"
+            />
+
+            <div className="absolute left-0 top-10 md:top-24 hidden md:block">
+              <Image
+                src={shape}
+                alt="shape"
+                aria-hidden="true"
+                className="h-auto w-40 md:w-64 lg:w-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
   );
 }

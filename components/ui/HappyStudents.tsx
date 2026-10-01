@@ -50,7 +50,7 @@ export default function HappyStudents({
           </li>
         ))}
 
-        {/* "2K+" badge */}
+        {/* badge */}
         <li
           className="flex h-14 w-14 items-center justify-center rounded-full bg-lime-300 text-sm font-bold text-gray-900 ring-2 ring-white"
           aria-label={`${totalLabel} happy students`}
